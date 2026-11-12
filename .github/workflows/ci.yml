@@ -28,6 +28,7 @@ jobs:
       - run: dotnet restore Byd.Client.slnx --locked-mode
       - run: dotnet build Byd.Client.slnx -c Release --no-restore -p:ContinuousIntegrationBuild=true
       - run: dotnet test Byd.Client.slnx -c Release --no-build --no-restore
+      - run: python -m unittest discover -s tests/package_checks -v
       - name: Pack and verify consumer (never contacts BYD)
         shell: bash
         run: |

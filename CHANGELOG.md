@@ -1,8 +1,10 @@
 # Changelog
 
-## 0.1.0-alpha.1 — Unreleased
+## [0.1.0-alpha.1](https://www.nuget.org/packages/Byd.Client/0.1.0-alpha.1) — 2026-11-12
 
-Initial public release candidate; not yet published.
+Initial experimental public prerelease. Published from tag `v0.1.0-alpha.1` at commit `402e8f87fe4d36093541cf145ed43754c164f4a2`.
+
+Publication used the protected GitHub Actions workflow and NuGet trusted publishing. Fresh public-feed installation, the compiling quick start, offline API checks, repository signature, published symbols and Source Link were verified. The immutable package retains the candidate-era README and changelog; this repository records the completed publication.
 
 - Additive typed charging/lock states, preserving the original string properties and constructors.
 - Local async control opt-in/out without reauthentication; actual permission changes revoke earlier approvals while retaining session/vehicle selection.
