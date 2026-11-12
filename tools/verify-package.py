@@ -12,6 +12,12 @@ from xml.sax.saxutils import escape
 import zipfile
 
 
+def unexpected_package_entries(names, intended):
+    # Newer SDKs use deterministic nuget.psmdcp; older NuGet uses a 32-digit GUID.
+    metadata = r"package/services/metadata/core-properties/(?:[a-f0-9]{32}|nuget)\.psmdcp"
+    return sorted(name for name in set(names) - set(intended) if not re.fullmatch(metadata, name))
+
+
 def run(*args, cwd=None, env=None):
     subprocess.run(args, cwd=cwd, env=env, check=True)
 
@@ -31,8 +37,7 @@ def main():
                     "README.md", "LICENSE", "CHANGELOG.md", "THIRD-PARTY-NOTICES.md",
                     "THIRD-PARTY-LICENSE.txt", "THIRD-PARTY-MARKETS-LICENSE.txt"}
         intended.update("docs/" + p.name for p in (repo / "docs").glob("*.md"))
-        extra = names - intended
-        unexpected = sorted(x for x in extra if not re.fullmatch(r"package/services/metadata/core-properties/[a-f0-9]+\.psmdcp", x))
+        unexpected = unexpected_package_entries(names, intended)
         assert not unexpected, f"Unexpected package files: {unexpected}"
         assert intended <= names, "Missing package files"
         readme = archive.read("README.md").decode("utf-8-sig").replace("\r\n", "\n")
