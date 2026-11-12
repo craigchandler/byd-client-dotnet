@@ -32,7 +32,8 @@ def main():
                     "THIRD-PARTY-LICENSE.txt", "THIRD-PARTY-MARKETS-LICENSE.txt"}
         intended.update("docs/" + p.name for p in (repo / "docs").glob("*.md"))
         extra = names - intended
-        assert all(re.fullmatch(r"package/services/metadata/core-properties/[a-f0-9]+\.psmdcp", x) for x in extra), "Unexpected package files"
+        unexpected = sorted(x for x in extra if not re.fullmatch(r"package/services/metadata/core-properties/[a-f0-9]+\.psmdcp", x))
+        assert not unexpected, f"Unexpected package files: {unexpected}"
         assert intended <= names, "Missing package files"
         readme = archive.read("README.md").decode("utf-8-sig").replace("\r\n", "\n")
         quickstart = (repo / "README.md").read_text().split("```csharp\n", 1)[1].split("\n```", 1)[0]
