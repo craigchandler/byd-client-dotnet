@@ -6,7 +6,13 @@ An unofficial C# client for developers building applications, scripts and integr
 
 ## Install
 
-Requires .NET 10. The current release candidate is **`Byd.Client` `0.1.0-alpha.1`**. This checkout has not been published to NuGet. Build a local package first:
+Requires .NET 10. Install the experimental [Byd.Client 0.1.0-alpha.1 prerelease from NuGet](https://www.nuget.org/packages/Byd.Client/0.1.0-alpha.1):
+
+```sh
+dotnet add package Byd.Client --version 0.1.0-alpha.1
+```
+
+For local development, build your own package:
 
 ```sh
 dotnet restore Byd.Client.slnx --locked-mode
@@ -21,7 +27,7 @@ dotnet add package Byd.Client --version 0.1.0-alpha.1 --no-restore
 dotnet restore --source /absolute/path/to/artifacts/packages --source https://api.nuget.org/v3/index.json
 ```
 
-The final restore also needs nuget.org (or its cached packages) for MQTTnet. After a maintainer actually publishes the prerelease, the equivalent public-feed command will be `dotnet add package Byd.Client --version 0.1.0-alpha.1 --prerelease`. Do not assume it is available today.
+The local-feed restore also needs nuget.org (or its cached packages) for MQTTnet. Use an isolated package cache when testing a locally built candidate against an already published version.
 
 ## Quick start
 
@@ -72,10 +78,10 @@ catch (OperationCanceledException) { Console.Error.WriteLine("Read cancelled.");
 finally { password = ""; }
 ```
 
-The same code is compiled from this README during package validation. [ReadStatus](samples/ReadStatus/Program.cs) adds a default offline mode: `dotnet run --project samples/ReadStatus -- --offline` lists bundled regions without creating a client. Restore the sample from the candidate feed first:
+The same code is compiled from this README during package validation. [ReadStatus](samples/ReadStatus/Program.cs) adds a default offline mode: `dotnet run --project samples/ReadStatus -- --offline` lists bundled regions without creating a client. Restore the sample from NuGet first:
 
 ```sh
-dotnet restore samples/ReadStatus/ReadStatus.csproj --source ./artifacts/packages --source https://api.nuget.org/v3/index.json
+dotnet restore samples/ReadStatus/ReadStatus.csproj --source https://api.nuget.org/v3/index.json
 dotnet run --project samples/ReadStatus --no-restore -- --offline
 ```
 
