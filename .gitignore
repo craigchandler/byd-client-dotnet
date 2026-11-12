@@ -1,0 +1,15 @@
+bin/
+obj/
+.venv/
+__pycache__/
+.pytest_cache/
+TestResults/
+artifacts/
+private/
+captures/
+.env*
+*.log
+*credentials*
+*secrets*
+.idea/
+.vs/

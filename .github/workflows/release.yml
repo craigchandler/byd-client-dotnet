@@ -1,0 +1,86 @@
+name: Publish approved NuGet prerelease
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Existing tag matching the current default-branch commit and project version (v0.1.0-alpha.1)'
+        required: true
+        type: string
+      publish:
+        description: 'Publish after validation and protected nuget environment approval (leave off for rehearsal)'
+        required: true
+        default: false
+        type: boolean
+permissions:
+  contents: read
+concurrency:
+  group: nuget-release
+  cancel-in-progress: false
+jobs:
+  prepare:
+    if: github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Verify exact release source and prerelease version
+        env:
+          RELEASE_TAG: ${{ inputs.tag }}
+        run: |
+          python - <<'PY'
+          import os, re, subprocess, xml.etree.ElementTree as ET
+          version = ET.parse('src/Byd.Client/Byd.Client.csproj').findtext('./PropertyGroup/Version')
+          tag = os.environ['RELEASE_TAG']
+          assert re.fullmatch(r'v[0-9]+\.[0-9]+\.[0-9]+-[0-9A-Za-z.-]+', tag), 'Use a prerelease version tag'
+          assert tag == 'v' + version, 'Tag must match the project version'
+          commit = subprocess.check_output(['git', 'rev-parse', '--verify', 'refs/tags/' + tag + '^{commit}'], text=True).strip()
+          head = subprocess.check_output(['git', 'rev-parse', 'HEAD'], text=True).strip()
+          assert commit == head, 'Tag must point to the current default-branch commit'
+          PY
+      - uses: actions/setup-dotnet@0f4a354dd5547a28c70b7853dbd95d5b67886e73 # v6.1.0
+        with:
+          dotnet-version: '10.0.x'
+      - run: dotnet restore Byd.Client.slnx --locked-mode
+      - run: dotnet build Byd.Client.slnx -c Release --no-restore -p:ContinuousIntegrationBuild=true
+      - run: dotnet test Byd.Client.slnx -c Release --no-build --no-restore
+      - name: Pack and verify release artifacts
+        run: |
+          dotnet pack src/Byd.Client/Byd.Client.csproj -c Release --no-build --no-restore -p:ContinuousIntegrationBuild=true -p:ReleaseBuild=true "-p:RepositoryUrl=https://github.com/$GITHUB_REPOSITORY" -o artifacts/packages
+          python tools/verify-package.py artifacts/packages/Byd.Client.*.nupkg --require-source-link
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: approved-nuget-packages
+          path: |
+            artifacts/packages/*.nupkg
+            artifacts/packages/*.snupkg
+          if-no-files-found: error
+          retention-days: 7
+  publish:
+    needs: prepare
+    if: inputs.publish && github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment: nuget
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: approved-nuget-packages
+          path: artifacts/packages
+      - uses: actions/setup-dotnet@0f4a354dd5547a28c70b7853dbd95d5b67886e73 # v6.1.0
+        with:
+          dotnet-version: '10.0.x'
+      - name: Exchange OIDC for short-lived NuGet credential
+        uses: NuGet/login@8d196754b4036150537f80ac539e15c2f1028841 # v1.2.0
+        id: login
+        with:
+          user: ${{ secrets.NUGET_USER }}
+      - name: Publish the validated package and adjacent symbols
+        env:
+          NUGET_API_KEY: ${{ steps.login.outputs.NUGET_API_KEY }}
+        run: dotnet nuget push 'artifacts/packages/*.nupkg' --api-key "$NUGET_API_KEY" --source https://api.nuget.org/v3/index.json

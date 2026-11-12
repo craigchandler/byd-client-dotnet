@@ -1,0 +1,35 @@
+name: Offline validation
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  validate:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-dotnet@0f4a354dd5547a28c70b7853dbd95d5b67886e73 # v6.1.0
+        with:
+          dotnet-version: '10.0.x'
+      - run: dotnet restore Byd.Client.slnx --locked-mode
+      - run: dotnet build Byd.Client.slnx -c Release --no-restore -p:ContinuousIntegrationBuild=true
+      - run: dotnet test Byd.Client.slnx -c Release --no-build --no-restore
+      - name: Pack and verify consumer (never contacts BYD)
+        shell: bash
+        run: |
+          dotnet pack src/Byd.Client/Byd.Client.csproj -c Release --no-build --no-restore -p:ContinuousIntegrationBuild=true -p:ReleaseBuild=true "-p:RepositoryUrl=https://github.com/$GITHUB_REPOSITORY" -o artifacts/packages
+          python tools/verify-package.py artifacts/packages/Byd.Client.*.nupkg --require-source-link

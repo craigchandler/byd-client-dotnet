@@ -1,0 +1,53 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <PackageId>Byd.Client</PackageId>
+    <Version>0.1.0-alpha.1</Version>
+    <Title>BYD Client for .NET (unofficial)</Title>
+    <Authors>BYD Desktop contributors</Authors>
+    <Description>Unofficial .NET client for international BYD accounts: vehicle status, location, feature discovery and explicitly approved remote controls. Experimental prerelease, initially validated with one Australian Atto 3. Not affiliated with BYD.</Description>
+    <PackageTags>byd;electric-vehicle;vehicle;telemetry;unofficial-api;dotnet</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/craigchandler/byd-client-dotnet</RepositoryUrl>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <PackageProjectUrl>$(RepositoryUrl)</PackageProjectUrl>
+    <PackageReleaseNotes>Initial experimental prerelease. See CHANGELOG.md and docs/compatibility.md in the source repository for scope and validation evidence.</PackageReleaseNotes>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <DebugType>portable</DebugType>
+    <PathMap>$(MSBuildProjectDirectory)=/_/src/Byd.Client</PathMap>
+    <!-- The SDK includes Source Link. Never embed all untracked working-tree source in symbols. -->
+    <EmbedUntrackedSources>false</EmbedUntrackedSources>
+    <!-- Keep the lock graph stable when the sibling app publishes for a supported platform. -->
+    <RuntimeIdentifiers>linux-x64;linux-arm64;win-x64;win-arm64</RuntimeIdentifiers>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="MQTTnet" Version="5.2.0.1603" />
+    <EmbeddedResource Include="Crypto/bangcle_tables.bin" />
+    <EmbeddedResource Include="markets.json" />
+    <InternalsVisibleTo Include="Byd.Client.Tests" />
+    <None Include="../../THIRD-PARTY-LICENSE.txt" Pack="true" PackagePath="" />
+    <None Include="../../THIRD-PARTY-MARKETS-LICENSE.txt" Pack="true" PackagePath="" />
+    <None Include="../../THIRD-PARTY-NOTICES.md" Pack="true" PackagePath="" />
+    <None Include="../../LICENSE" Pack="true" PackagePath="" />
+    <None Include="../../CHANGELOG.md" Pack="true" PackagePath="" />
+    <None Include="../../docs/*.md" Pack="true" PackagePath="docs/" />
+  </ItemGroup>
+  <Target Name="PreparePackageReadme" BeforeTargets="_GetPackageFiles" DependsOnTargets="InitializeSourceControlInformation">
+    <PropertyGroup>
+      <_PackageReadme>$([System.IO.File]::ReadAllText('$(MSBuildProjectDirectory)/../../README.md'))</_PackageReadme>
+      <!-- NuGet cannot resolve repository-relative documentation links. Keep GitHub's README portable. -->
+      <_PackageReadme Condition="'$(RepositoryUrl)' != '' and '$(SourceRevisionId)' != ''">$([System.Text.RegularExpressions.Regex]::Replace('$([MSBuild]::Escape($(_PackageReadme)))', '\]\((?!https?://|#)([^)]+)\)', ']($(RepositoryUrl)/blob/$(SourceRevisionId)/$1)'))</_PackageReadme>
+    </PropertyGroup>
+    <WriteLinesToFile File="$(IntermediateOutputPath)README.md" Lines="$([MSBuild]::Escape($(_PackageReadme)))" Overwrite="true" Encoding="UTF-8" />
+    <ItemGroup>
+      <None Include="$(IntermediateOutputPath)README.md" Pack="true" PackagePath="" />
+    </ItemGroup>
+  </Target>
+  <Target Name="ValidateReleaseMetadata" BeforeTargets="GenerateNuspec" DependsOnTargets="InitializeSourceControlInformation" Condition="'$(ReleaseBuild)' == 'true'">
+    <Error Condition="'$(RepositoryUrl)' == ''" Text="Set the verified public GitHub RepositoryUrl before release." />
+    <Error Condition="'$(SourceRevisionId)' == ''" Text="Release packages must come from a committed Git revision." />
+  </Target>
+</Project>

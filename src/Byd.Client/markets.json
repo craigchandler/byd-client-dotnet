@@ -1,0 +1,709 @@
+[
+  {
+    "name": "Albania",
+    "countryCode": "AL",
+    "language": "en",
+    "serverRegion": "Europe",
+    "apiBaseUrl": "https://dilinkappoversea-eu.byd.auto"
+  },
+  {
+    "name": "Argentina",
+    "countryCode": "AR",
+    "language": "es",
+    "serverRegion": "Mexico/Latin America",
+    "apiBaseUrl": "https://dilinkappoversea-mx.byd.auto"
+  },
+  {
+    "name": "Australia",
+    "countryCode": "AU",
+    "language": "en",
+    "serverRegion": "Australia",
+    "apiBaseUrl": "https://dilinkappoversea-au.byd.auto"
+  },
+  {
+    "name": "Austria",
+    "countryCode": "AT",
+    "language": "de",
+    "serverRegion": "Europe",
+    "apiBaseUrl": "https://dilinkappoversea-eu.byd.auto"
+  },
+  {
+    "name": "Bahrain",
+    "countryCode": "BH",
+    "language": "ar",
+    "serverRegion": "Middle East/Africa",
+    "apiBaseUrl": "https://dilinkappoversea-no.byd.auto"
+  },
+  {
+    "name": "Bangladesh",
+    "countryCode": "BD",
+    "language": "en",
+    "serverRegion": "Singapore/APAC",
+    "apiBaseUrl": "https://dilinkappoversea-sg.byd.auto"
+  },
+  {
+    "name": "Belgium",
+    "countryCode": "BE",
+    "language": "en",
+    "serverRegion": "Europe",
+    "apiBaseUrl": "https://dilinkappoversea-eu.byd.auto"
+  },
+  {
+    "name": "Bhutan",
+    "countryCode": "BT",
+    "language": "en",
+    "serverRegion": "Singapore/APAC",
+    "apiBaseUrl": "https://dilinkappoversea-sg.byd.auto"
+  },
+  {
+    "name": "Bolivia",
+    "countryCode": "BO",
+    "language": "es",
+    "serverRegion": "Mexico/Latin America",
+    "apiBaseUrl": "https://dilinkappoversea-mx.byd.auto"
+  },
+  {
+    "name": "Bosnia and Herzegovina",
+    "countryCode": "BA",
+    "language": "en",
+    "serverRegion": "Europe",
+    "apiBaseUrl": "https://dilinkappoversea-eu.byd.auto"
+  },
+  {
+    "name": "Brazil",
+    "countryCode": "BR",
+    "language": "pt",
+    "serverRegion": "Brazil",
+    "apiBaseUrl": "https://dilinkappoversea-br.byd.auto"
+  },
+  {
+    "name": "Brunei",
+    "countryCode": "BN",
+    "language": "en",
+    "serverRegion": "Singapore/APAC",
+    "apiBaseUrl": "https://dilinkappoversea-sg.byd.auto"
+  },
+  {
+    "name": "Bulgaria",
+    "countryCode": "BG",
+    "language": "en",
+    "serverRegion": "Europe",
+    "apiBaseUrl": "https://dilinkappoversea-eu.byd.auto"
+  },
+  {
+    "name": "Cambodia",
+    "countryCode": "KH",
+    "language": "en",
+    "serverRegion": "Singapore/APAC",
+    "apiBaseUrl": "https://dilinkappoversea-sg.byd.auto"
+  },
+  {
+    "name": "Chile",
+    "countryCode": "CL",
+    "language": "es",
+    "serverRegion": "Mexico/Latin America",
+    "apiBaseUrl": "https://dilinkappoversea-mx.byd.auto"
+  },
+  {
+    "name": "Colombia",
+    "countryCode": "CO",
+    "language": "es",
+    "serverRegion": "Mexico/Latin America",
+    "apiBaseUrl": "https://dilinkappoversea-mx.byd.auto"
+  },
+  {
+    "name": "Costa Rica",
+    "countryCode": "CR",
+    "language": "es",
+    "serverRegion": "Mexico/Latin America",
+    "apiBaseUrl": "https://dilinkappoversea-mx.byd.auto"
+  },
+  {
+    "name": "Croatia",
+    "countryCode": "HR",
+    "language": "en",
+    "serverRegion": "Europe",
+    "apiBaseUrl": "https://dilinkappoversea-eu.byd.auto"
+  },
+  {
+    "name": "Cyprus",
+    "countryCode": "CY",
+    "language": "en",
+    "serverRegion": "Europe",
+    "apiBaseUrl": "https://dilinkappoversea-eu.byd.auto"
+  },
+  {
+    "name": "Czech Republic",
+    "countryCode": "CZ",
+    "language": "en",
+    "serverRegion": "Europe",
+    "apiBaseUrl": "https://dilinkappoversea-eu.byd.auto"
+  },
+  {
+    "name": "Denmark",
+    "countryCode": "DK",
+    "language": "en",
+    "serverRegion": "Europe",
+    "apiBaseUrl": "https://dilinkappoversea-eu.byd.auto"
+  },
+  {
+    "name": "Dominican Republic",
+    "countryCode": "DO",
+    "language": "es",
+    "serverRegion": "Mexico/Latin America",
+    "apiBaseUrl": "https://dilinkappoversea-mx.byd.auto"
+  },
+  {
+    "name": "Ecuador",
+    "countryCode": "EC",
+    "language": "es",
+    "serverRegion": "Mexico/Latin America",
+    "apiBaseUrl": "https://dilinkappoversea-mx.byd.auto"
+  },
+  {
+    "name": "Egypt",
+    "countryCode": "EG",
+    "language": "ar",
+    "serverRegion": "Middle East/Africa",
+    "apiBaseUrl": "https://dilinkappoversea-no.byd.auto"
+  },
+  {
+    "name": "El Salvador",
+    "countryCode": "SV",
+    "language": "es",
+    "serverRegion": "Mexico/Latin America",
+    "apiBaseUrl": "https://dilinkappoversea-mx.byd.auto"
+  },
+  {
+    "name": "Estonia",
+    "countryCode": "EE",
+    "language": "en",
+    "serverRegion": "Europe",
+    "apiBaseUrl": "https://dilinkappoversea-eu.byd.auto"
+  },
+  {
+    "name": "Finland",
+    "countryCode": "FI",
+    "language": "en",
+    "serverRegion": "Europe",
+    "apiBaseUrl": "https://dilinkappoversea-eu.byd.auto"
+  },
+  {
+    "name": "France",
+    "countryCode": "FR",
+    "language": "fr",
+    "serverRegion": "Europe",
+    "apiBaseUrl": "https://dilinkappoversea-eu.byd.auto"
+  },
+  {
+    "name": "French Polynesia",
+    "countryCode": "PF",
+    "language": "fr",
+    "serverRegion": "Singapore/APAC",
+    "apiBaseUrl": "https://dilinkappoversea-sg.byd.auto"
+  },
+  {
+    "name": "Germany",
+    "countryCode": "DE",
+    "language": "de",
+    "serverRegion": "Europe",
+    "apiBaseUrl": "https://dilinkappoversea-eu.byd.auto"
+  },
+  {
+    "name": "Greece",
+    "countryCode": "GR",
+    "language": "en",
+    "serverRegion": "Europe",
+    "apiBaseUrl": "https://dilinkappoversea-eu.byd.auto"
+  },
+  {
+    "name": "Guatemala",
+    "countryCode": "GT",
+    "language": "es",
+    "serverRegion": "Mexico/Latin America",
+    "apiBaseUrl": "https://dilinkappoversea-mx.byd.auto"
+  },
+  {
+    "name": "Hong Kong",
+    "countryCode": "HK",
+    "language": "zh_TW",
+    "serverRegion": "Singapore/APAC",
+    "apiBaseUrl": "https://dilinkappoversea-sg.byd.auto"
+  },
+  {
+    "name": "Honduras",
+    "countryCode": "HN",
+    "language": "es",
+    "serverRegion": "Mexico/Latin America",
+    "apiBaseUrl": "https://dilinkappoversea-mx.byd.auto"
+  },
+  {
+    "name": "Hungary",
+    "countryCode": "HU",
+    "language": "en",
+    "serverRegion": "Europe",
+    "apiBaseUrl": "https://dilinkappoversea-eu.byd.auto"
+  },
+  {
+    "name": "Iceland",
+    "countryCode": "IS",
+    "language": "en",
+    "serverRegion": "Europe",
+    "apiBaseUrl": "https://dilinkappoversea-eu.byd.auto"
+  },
+  {
+    "name": "India",
+    "countryCode": "IN",
+    "language": "en",
+    "serverRegion": "India",
+    "apiBaseUrl": "https://dilinkappoversea-in.byd.auto"
+  },
+  {
+    "name": "Indonesia",
+    "countryCode": "ID",
+    "language": "id",
+    "serverRegion": "Indonesia",
+    "apiBaseUrl": "https://dilinkappoversea-id.byd.auto"
+  },
+  {
+    "name": "Ireland",
+    "countryCode": "IE",
+    "language": "en",
+    "serverRegion": "Europe",
+    "apiBaseUrl": "https://dilinkappoversea-eu.byd.auto"
+  },
+  {
+    "name": "Israel",
+    "countryCode": "IL",
+    "language": "he",
+    "serverRegion": "Europe",
+    "apiBaseUrl": "https://dilinkappoversea-eu.byd.auto"
+  },
+  {
+    "name": "Italy",
+    "countryCode": "IT",
+    "language": "it",
+    "serverRegion": "Europe",
+    "apiBaseUrl": "https://dilinkappoversea-eu.byd.auto"
+  },
+  {
+    "name": "Japan",
+    "countryCode": "JP",
+    "language": "ja",
+    "serverRegion": "Japan",
+    "apiBaseUrl": "https://dilinkappoversea-jp.byd.auto"
+  },
+  {
+    "name": "Jordan",
+    "countryCode": "JO",
+    "language": "ar",
+    "serverRegion": "Middle East/Africa",
+    "apiBaseUrl": "https://dilinkappoversea-no.byd.auto"
+  },
+  {
+    "name": "Kazakhstan",
+    "countryCode": "KZ",
+    "language": "ru",
+    "serverRegion": "Kazakhstan",
+    "apiBaseUrl": "https://dilinkappoversea-kz.byd.auto"
+  },
+  {
+    "name": "Kosovo",
+    "countryCode": "XK",
+    "language": "en",
+    "serverRegion": "Europe",
+    "apiBaseUrl": "https://dilinkappoversea-eu.byd.auto"
+  },
+  {
+    "name": "Kuwait",
+    "countryCode": "KW",
+    "language": "ar",
+    "serverRegion": "Middle East/Africa",
+    "apiBaseUrl": "https://dilinkappoversea-no.byd.auto"
+  },
+  {
+    "name": "Laos",
+    "countryCode": "LA",
+    "language": "en",
+    "serverRegion": "Singapore/APAC",
+    "apiBaseUrl": "https://dilinkappoversea-sg.byd.auto"
+  },
+  {
+    "name": "Latvia",
+    "countryCode": "LV",
+    "language": "en",
+    "serverRegion": "Europe",
+    "apiBaseUrl": "https://dilinkappoversea-eu.byd.auto"
+  },
+  {
+    "name": "Liechtenstein",
+    "countryCode": "LI",
+    "language": "de",
+    "serverRegion": "Europe",
+    "apiBaseUrl": "https://dilinkappoversea-eu.byd.auto"
+  },
+  {
+    "name": "Lithuania",
+    "countryCode": "LT",
+    "language": "en",
+    "serverRegion": "Europe",
+    "apiBaseUrl": "https://dilinkappoversea-eu.byd.auto"
+  },
+  {
+    "name": "Luxembourg",
+    "countryCode": "LU",
+    "language": "fr",
+    "serverRegion": "Europe",
+    "apiBaseUrl": "https://dilinkappoversea-eu.byd.auto"
+  },
+  {
+    "name": "Macao",
+    "countryCode": "MO",
+    "language": "zh_TW",
+    "serverRegion": "Singapore/APAC",
+    "apiBaseUrl": "https://dilinkappoversea-sg.byd.auto"
+  },
+  {
+    "name": "Malaysia",
+    "countryCode": "MY",
+    "language": "en",
+    "serverRegion": "Singapore/APAC",
+    "apiBaseUrl": "https://dilinkappoversea-sg.byd.auto"
+  },
+  {
+    "name": "Maldives",
+    "countryCode": "MV",
+    "language": "en",
+    "serverRegion": "Singapore/APAC",
+    "apiBaseUrl": "https://dilinkappoversea-sg.byd.auto"
+  },
+  {
+    "name": "Malta",
+    "countryCode": "MT",
+    "language": "en",
+    "serverRegion": "Europe",
+    "apiBaseUrl": "https://dilinkappoversea-eu.byd.auto"
+  },
+  {
+    "name": "Mauritius",
+    "countryCode": "MU",
+    "language": "en",
+    "serverRegion": "Middle East/Africa",
+    "apiBaseUrl": "https://dilinkappoversea-no.byd.auto"
+  },
+  {
+    "name": "Mexico",
+    "countryCode": "MX",
+    "language": "es",
+    "serverRegion": "Mexico/Latin America",
+    "apiBaseUrl": "https://dilinkappoversea-mx.byd.auto"
+  },
+  {
+    "name": "Moldova",
+    "countryCode": "MD",
+    "language": "ru",
+    "serverRegion": "Europe",
+    "apiBaseUrl": "https://dilinkappoversea-eu.byd.auto"
+  },
+  {
+    "name": "Monaco",
+    "countryCode": "MC",
+    "language": "fr",
+    "serverRegion": "Europe",
+    "apiBaseUrl": "https://dilinkappoversea-eu.byd.auto"
+  },
+  {
+    "name": "Mongolia",
+    "countryCode": "MN",
+    "language": "en",
+    "serverRegion": "Singapore/APAC",
+    "apiBaseUrl": "https://dilinkappoversea-sg.byd.auto"
+  },
+  {
+    "name": "Montenegro",
+    "countryCode": "ME",
+    "language": "en",
+    "serverRegion": "Europe",
+    "apiBaseUrl": "https://dilinkappoversea-eu.byd.auto"
+  },
+  {
+    "name": "Morocco",
+    "countryCode": "MA",
+    "language": "ar",
+    "serverRegion": "Middle East/Africa",
+    "apiBaseUrl": "https://dilinkappoversea-no.byd.auto"
+  },
+  {
+    "name": "Myanmar",
+    "countryCode": "MM",
+    "language": "en",
+    "serverRegion": "Singapore/APAC",
+    "apiBaseUrl": "https://dilinkappoversea-sg.byd.auto"
+  },
+  {
+    "name": "Nepal",
+    "countryCode": "NP",
+    "language": "en",
+    "serverRegion": "Singapore/APAC",
+    "apiBaseUrl": "https://dilinkappoversea-sg.byd.auto"
+  },
+  {
+    "name": "Netherlands",
+    "countryCode": "NL",
+    "language": "nl",
+    "serverRegion": "Europe",
+    "apiBaseUrl": "https://dilinkappoversea-eu.byd.auto"
+  },
+  {
+    "name": "New Caledonia",
+    "countryCode": "NC",
+    "language": "fr",
+    "serverRegion": "Singapore/APAC",
+    "apiBaseUrl": "https://dilinkappoversea-sg.byd.auto"
+  },
+  {
+    "name": "New Zealand",
+    "countryCode": "NZ",
+    "language": "en",
+    "serverRegion": "Australia",
+    "apiBaseUrl": "https://dilinkappoversea-au.byd.auto"
+  },
+  {
+    "name": "Nicaragua",
+    "countryCode": "NI",
+    "language": "es",
+    "serverRegion": "Mexico/Latin America",
+    "apiBaseUrl": "https://dilinkappoversea-mx.byd.auto"
+  },
+  {
+    "name": "North Macedonia",
+    "countryCode": "MK",
+    "language": "en",
+    "serverRegion": "Europe",
+    "apiBaseUrl": "https://dilinkappoversea-eu.byd.auto"
+  },
+  {
+    "name": "Norway",
+    "countryCode": "NO",
+    "language": "en",
+    "serverRegion": "Europe",
+    "apiBaseUrl": "https://dilinkappoversea-eu.byd.auto"
+  },
+  {
+    "name": "Oman",
+    "countryCode": "OM",
+    "language": "ar",
+    "serverRegion": "Oman",
+    "apiBaseUrl": "https://dilinkappoversea-om.byd.auto"
+  },
+  {
+    "name": "Pakistan",
+    "countryCode": "PK",
+    "language": "en",
+    "serverRegion": "Singapore/APAC",
+    "apiBaseUrl": "https://dilinkappoversea-sg.byd.auto"
+  },
+  {
+    "name": "Panama",
+    "countryCode": "PA",
+    "language": "es",
+    "serverRegion": "Mexico/Latin America",
+    "apiBaseUrl": "https://dilinkappoversea-mx.byd.auto"
+  },
+  {
+    "name": "Paraguay",
+    "countryCode": "PY",
+    "language": "es",
+    "serverRegion": "Mexico/Latin America",
+    "apiBaseUrl": "https://dilinkappoversea-mx.byd.auto"
+  },
+  {
+    "name": "Peru",
+    "countryCode": "PE",
+    "language": "es",
+    "serverRegion": "Mexico/Latin America",
+    "apiBaseUrl": "https://dilinkappoversea-mx.byd.auto"
+  },
+  {
+    "name": "Philippines",
+    "countryCode": "PH",
+    "language": "en",
+    "serverRegion": "Singapore/APAC",
+    "apiBaseUrl": "https://dilinkappoversea-sg.byd.auto"
+  },
+  {
+    "name": "Poland",
+    "countryCode": "PL",
+    "language": "en",
+    "serverRegion": "Europe",
+    "apiBaseUrl": "https://dilinkappoversea-eu.byd.auto"
+  },
+  {
+    "name": "Portugal",
+    "countryCode": "PT",
+    "language": "pt",
+    "serverRegion": "Europe",
+    "apiBaseUrl": "https://dilinkappoversea-eu.byd.auto"
+  },
+  {
+    "name": "Qatar",
+    "countryCode": "QA",
+    "language": "ar",
+    "serverRegion": "Middle East/Africa",
+    "apiBaseUrl": "https://dilinkappoversea-no.byd.auto"
+  },
+  {
+    "name": "Reunion Island",
+    "countryCode": "RE",
+    "language": "fr",
+    "serverRegion": "Middle East/Africa",
+    "apiBaseUrl": "https://dilinkappoversea-no.byd.auto"
+  },
+  {
+    "name": "Romania",
+    "countryCode": "RO",
+    "language": "en",
+    "serverRegion": "Europe",
+    "apiBaseUrl": "https://dilinkappoversea-eu.byd.auto"
+  },
+  {
+    "name": "Saudi Arabia",
+    "countryCode": "SA",
+    "language": "ar",
+    "serverRegion": "Saudi Arabia",
+    "apiBaseUrl": "https://dilinkappoversea-sa.byd.auto"
+  },
+  {
+    "name": "Serbia",
+    "countryCode": "RS",
+    "language": "en",
+    "serverRegion": "Europe",
+    "apiBaseUrl": "https://dilinkappoversea-eu.byd.auto"
+  },
+  {
+    "name": "Singapore",
+    "countryCode": "SG",
+    "language": "en",
+    "serverRegion": "Singapore/APAC",
+    "apiBaseUrl": "https://dilinkappoversea-sg.byd.auto"
+  },
+  {
+    "name": "Slovakia",
+    "countryCode": "SK",
+    "language": "en",
+    "serverRegion": "Europe",
+    "apiBaseUrl": "https://dilinkappoversea-eu.byd.auto"
+  },
+  {
+    "name": "Slovenia",
+    "countryCode": "SI",
+    "language": "en",
+    "serverRegion": "Europe",
+    "apiBaseUrl": "https://dilinkappoversea-eu.byd.auto"
+  },
+  {
+    "name": "South Africa",
+    "countryCode": "ZA",
+    "language": "en",
+    "serverRegion": "Middle East/Africa",
+    "apiBaseUrl": "https://dilinkappoversea-no.byd.auto"
+  },
+  {
+    "name": "South Korea",
+    "countryCode": "KR",
+    "language": "ko",
+    "serverRegion": "Korea",
+    "apiBaseUrl": "https://dilinkappoversea-kr.byd.auto"
+  },
+  {
+    "name": "Spain",
+    "countryCode": "ES",
+    "language": "es",
+    "serverRegion": "Europe",
+    "apiBaseUrl": "https://dilinkappoversea-eu.byd.auto"
+  },
+  {
+    "name": "Sri Lanka",
+    "countryCode": "LK",
+    "language": "en",
+    "serverRegion": "Singapore/APAC",
+    "apiBaseUrl": "https://dilinkappoversea-sg.byd.auto"
+  },
+  {
+    "name": "Sweden",
+    "countryCode": "SE",
+    "language": "en",
+    "serverRegion": "Europe",
+    "apiBaseUrl": "https://dilinkappoversea-eu.byd.auto"
+  },
+  {
+    "name": "Switzerland",
+    "countryCode": "CH",
+    "language": "de",
+    "serverRegion": "Europe",
+    "apiBaseUrl": "https://dilinkappoversea-eu.byd.auto"
+  },
+  {
+    "name": "Thailand",
+    "countryCode": "TH",
+    "language": "th",
+    "serverRegion": "Singapore/APAC",
+    "apiBaseUrl": "https://dilinkappoversea-sg.byd.auto"
+  },
+  {
+    "name": "Turkey",
+    "countryCode": "TR",
+    "language": "tr",
+    "serverRegion": "Turkey",
+    "apiBaseUrl": "https://dilinkappoversea-tr.byd.auto"
+  },
+  {
+    "name": "Ukraine",
+    "countryCode": "UA",
+    "language": "ru",
+    "serverRegion": "Europe",
+    "apiBaseUrl": "https://dilinkappoversea-eu.byd.auto"
+  },
+  {
+    "name": "United Arab Emirates",
+    "countryCode": "AE",
+    "language": "ar",
+    "serverRegion": "Middle East/Africa",
+    "apiBaseUrl": "https://dilinkappoversea-no.byd.auto"
+  },
+  {
+    "name": "United Kingdom",
+    "countryCode": "GB",
+    "language": "en",
+    "serverRegion": "Europe",
+    "apiBaseUrl": "https://dilinkappoversea-eu.byd.auto"
+  },
+  {
+    "name": "Uruguay",
+    "countryCode": "UY",
+    "language": "es",
+    "serverRegion": "Mexico/Latin America",
+    "apiBaseUrl": "https://dilinkappoversea-mx.byd.auto"
+  },
+  {
+    "name": "Uzbekistan",
+    "countryCode": "UZ",
+    "language": "ru",
+    "serverRegion": "Uzbekistan",
+    "apiBaseUrl": "https://dilinkappoversea-uz.byd.auto"
+  },
+  {
+    "name": "Vatican City",
+    "countryCode": "VA",
+    "language": "it",
+    "serverRegion": "Europe",
+    "apiBaseUrl": "https://dilinkappoversea-eu.byd.auto"
+  },
+  {
+    "name": "Vietnam",
+    "countryCode": "VN",
+    "language": "vi",
+    "serverRegion": "Vietnam",
+    "apiBaseUrl": "https://dilinkappoversea-vn.byd.auto"
+  }
+]
