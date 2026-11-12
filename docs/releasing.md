@@ -1,6 +1,10 @@
 # First public release
 
-Current candidate: `Byd.Client` **0.1.0-alpha.1**, targeting **net10.0**. Neither identity nor target was changed for release preparation. The NuGet flat-container lookup returned 404 on 11 November 2026; that is not a reservation, ownership check or publication guarantee. Recheck the ID before launch. The target stays .NET 10 LTS; .NET 8/9 are now out of support according to Microsoft's policy. No unnecessary multi-targeting was added.
+First published prerelease: [Byd.Client **0.1.0-alpha.1**](https://www.nuget.org/packages/Byd.Client/0.1.0-alpha.1), targeting **net10.0**, published on **12 November 2026** from tag `v0.1.0-alpha.1` at `402e8f87fe4d36093541cf145ed43754c164f4a2`. Neither identity nor target was changed for release preparation. The target stays .NET 10 LTS; no unnecessary multi-targeting was added.
+
+The [publishing run](https://github.com/craigchandler/byd-client-dotnet/actions/runs/43141535393) completed after explicit maintainer approval. Both the main and symbol packages were accepted. After indexing, a fresh public-feed consumer compiled the packaged quick start and ran only the offline sample and local APIs. The NuGet repository signature, public symbols and Source Link were verified. No BYD requests or vehicle commands were made. The released package retains its candidate-era documentation; the repository documentation records the publication afterward.
+
+The checklist below records the launch process and remains guidance for subsequent versions. Do not rerun publication for `0.1.0-alpha.1`, move its tag or attempt to replace its immutable package. Publish fixes under a new reviewed prerelease version.
 
 ## Decisions and external setup
 
